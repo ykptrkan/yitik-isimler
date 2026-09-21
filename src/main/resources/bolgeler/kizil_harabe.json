@@ -1,0 +1,68 @@
+{
+  "bolgeId": "kizil_harabe",
+  "karsilasmalar": [
+    {
+      "id": "harabe_bekcisi",
+      "takmaAd": "Kül Lordu",
+      "aciklama": "Günün kan kızılı olduğu bu yıkıntılarda, dinmek bilmeyen bir öfkeyle yanan eski bir kral.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Kor", "Ig", "Vex", "Xal", "Kael"],
+        "ipuclari": [
+          {
+            "id": "yanik_flama",
+            "isim": "Kavrulmuş Sancak",
+            "metin": "Sancak üzerindeki eski dildeki marşta şu dizeler var: '{0} güneş altında, bitmek bilmeyen bir {1} kusan yozlaşmış bir {2}.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "Krallığım küle döndü... Şimdi senin ruhun da bu alevlere odun olacak! Diz çök!",
+            "secenekler": [
+              { "metin": "Senin cılız ateşin beni yakamaz! (Kibir)", "yozlasmaCarpani": 2, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Sancağındaki yozlaşmış ateş sadece bir yalan, lordum. (İpucunu Kullan)", "yozlasmaCarpani": 0, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Ateşin sadece seni tüketiyor. Dinlen artık. (Sükunet)", "yozlasmaCarpani": -1, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Ateşimin cılız olduğunu mu sanıyorsun?! Binlerce yılın öfkesiyle yanacaksın!",
+            "secenekler": [
+              { "metin": "[Alev Kapanına Yakalan]", "yozlasmaCarpani": 7, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Alevleri dalgalanır) Yozlaşmış mı... Hayır, ben halkımı korumaya çalıştım! Karanlık bizi yutmasın diye yandım!",
+            "secenekler": [
+              { "metin": "Fedakarlığın unutuldu. Artık karanlık seni de kabul etmeyecek. İsmini bana ver.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Halkın senin kibrin yüzünden küle döndü! (Hakaret)", "yozlasmaCarpani": 4, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Dinlenmek mi... Benim öfkem sönmeden bu alevler asla dinmez!",
+            "secenekler": [
+              { "metin": "O zaman senin alevini ruhumla söndüreceğim! (Kibir)", "yozlasmaCarpani": 3, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Öfkeni bana bırak, Kül Lordu. Küllerin savrulsun.", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Belki de küllerin savrulma vakti gelmiştir... Eski ismimi hatırlat bana!",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "O halde sen de onlarla birlikte yan!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Kül Lordu'nun alevini söndürmek ve ismine hükmetmek için zihninden can yakan bir kelimeyi ateşe at."
+      }
+    }
+  ]
+}

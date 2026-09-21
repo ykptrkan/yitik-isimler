@@ -1,0 +1,68 @@
+{
+  "bolgeId": "yankilanan_magara",
+  "karsilasmalar": [
+    {
+      "id": "kor_yanki",
+      "takmaAd": "Kör Yankı",
+      "aciklama": "Mağaranın derinliklerinde, duyduğu her sesi silah olarak kullanan kadim bir titreşim.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Nim", "Ohm", "Lir", "Va", "Sol"],
+        "ipuclari": [
+          {
+            "id": "kristal_parcasi",
+            "isim": "Titreşen Kristal",
+            "metin": "Kristale dokunduğunda zihninde şu cümle yankılanıyor: '{0} duvarlarda, {1} gibi çarpan bir {2} gizli.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "Sesin... Çok tanıdık. Ama burada sadece benim sesim yankılanabilir! Neden geldin?",
+            "secenekler": [
+              { "metin": "Seni tamamen susturmaya geldim! (Öfke)", "yozlasmaCarpani": 2, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Senin bir silah gibi çarpan nefesini kesmeye geldim. (İpucunu Kullan)", "yozlasmaCarpani": -1, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "İkimizin de sesi uyum içinde titreşebilir. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "(Sesin mağarada çığlığa dönüşür) Öfken kulaklarımı tırmalıyor! Bu çığlık senin sonun olacak!",
+            "secenekler": [
+              { "metin": "[Kendi Sesinle Vurul]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "Çarpan bir nefes... Evet, ben buyum. Duvarlara çarparak büyüyen bir yıkım! Ama sen, sen titreşmiyorsun.",
+            "secenekler": [
+              { "metin": "Ben yıkımı yutan sessizliğim. Bana adını ver.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Ben senin titreşimini kıracak tokmağım! (Kibir)", "yozlasmaCarpani": 4, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Uyum mu? Bu mağara zayıf sesleri yutar. Uyum sağlamak demek, yok olmak demektir!",
+            "secenekler": [
+              { "metin": "Seni yok etmeme gerek yok, senin yankını ben yöneteceğim. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "O halde sana gücün ne olduğunu göstereceğim! (Öfke)", "yozlasmaCarpani": 3, "sonrakiDugum": "ofke_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Bu bir uyum mu yoksa esaret mi göreceğiz. Söyle bakalım, bu duvarlar ne diye yankılanacak?",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Sesin bana güç veriyor! Titreşerek parçalan!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Mağaradaki fırtınalı yankıyı dindirmek için kendi kelimelerinden birini sessizliğe armağan et."
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "bolgeId": "kristal_zirve",
+  "karsilasmalar": [
+    {
+      "id": "zirve_koruyucusu",
+      "takmaAd": "İlk Işık",
+      "aciklama": "Hiçlik Kapısı'nın hemen önünde, dünyanın en yüksek noktasında nöbet tutan yüce varlık.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Ul", "Sol", "Ka", "Zan", "Ohm"],
+        "ipuclari": [
+          {
+            "id": "kristal_tablet",
+            "isim": "Puslu Kristal Tablet",
+            "metin": "Tablette dünyanın yaradılışına dair bir kehanet parlıyor: '{0} zirvelerde, ilk {1} doğduğunda ışığıyla göğe uzanan ilk {2}.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "(Göz kamaştırıcı bir ışık huzmesi içinden konuşur) Buradan ötesi yoktur. Hiçliğe adım atmak, varoluşu reddetmektir. Geri dön.",
+            "secenekler": [
+              { "metin": "Seni parçalayıp o kapıdan geçeceğim! (Öfke)", "yozlasmaCarpani": 4, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "İlk güneş doğduğunda başlayan döngüyü kırmaya geldim. (İpucunu Kullan)", "yozlasmaCarpani": -1, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Varoluşumu anlamak için hiçlikle yüzleşmeliyim. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Bir fani, ilk ışığı nasıl parçalayabilir? Kibrin gözlerini kör edecek!",
+            "secenekler": [
+              { "metin": "[Kör Edici Işığa Maruz Kal]", "yozlasmaCarpani": 7, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Işık hafifçe titrer ve kararır) Döngüyü kırmak mı? Buna cüret edebilecek misin? Ben ışığın kendisiyim!",
+            "secenekler": [
+              { "metin": "Güneşin bile bir sonu vardır, Yüce Bekçi. Karanlığı kabul et.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Senin cılız ışığını kendi ellerimle söndüreceğim! (Kibir)", "yozlasmaCarpani": 5, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Hiçliğin içinde anlam aramak, ahmakların işidir. Işığın sıcaklığında kal, huzur bul.",
+            "secenekler": [
+              { "metin": "Benim huzurum yalanların içinde olamaz. Çekil yolumdan. (Kararlılık)", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Senin yalan ışığına ihtiyacım yok! (Öfke)", "yozlasmaCarpani": 3, "sonrakiDugum": "ofke_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Eğer hiçliği bu kadar arzuluyorsan... O halde ismimi söyle ve ışığı tamamen söndür.",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "O halde sonsuza dek karanlıkta kal!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 8, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Kapıyı aralamak ve İlk Işığı tamamen söndürmek için, en değerli hislerinden birini sonsuz bir boşluğa bırakmalısın."
+      }
+    }
+  ]
+}

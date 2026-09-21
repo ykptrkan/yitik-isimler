@@ -1,0 +1,68 @@
+{
+  "bolgeId": "unutulmus_aile_evi",
+  "karsilasmalar": [
+    {
+      "id": "gecmisin_yankisi",
+      "takmaAd": "Aynadaki Yabancı",
+      "aciklama": "Çocukluk evinin yıkıntıları arasında, sana kendi gözlerinle bakan karanlık hatıra.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Va", "Lun", "Nok", "Tir", "Nir"],
+        "ipuclari": [
+          {
+            "id": "aile_tablosu",
+            "isim": "Yırtık Aile Tablosu",
+            "metin": "Tablonun arkasında annenin solmuş el yazısı var: '{0} bir gecede, {1} şahidimizdi. Seninle bu lanetli {2} imzaladık ve sana 5 heceli bir isim verdik.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "(Aynadaki yansıman sana acıyarak bakar) Eve hoş geldin. Yıllardır kaçtığın gerçeği, paramparça olmuş ruhunu görmeye hazır mısın?",
+            "secenekler": [
+              { "metin": "Ben bir hiçim, sıfırdan var oldum! (İnkar)", "yozlasmaCarpani": 4, "sonrakiDugum": "inkar_yolu" },
+              { "metin": "O lanetli anlaşmayı ve bana verdiğiniz ismi biliyorum. (İpucunu Kullan)", "yozlasmaCarpani": 0, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Geçmişim acı da olsa onu kabul ediyorum. (Kabulleniş)", "yozlasmaCarpani": -2, "sonrakiDugum": "kabul_yolu" }
+            ]
+          },
+          "inkar_yolu": {
+            "npcMetni": "Geçmişini inkar eden biri, gelecekte de sadece bir gölge olarak kalmaya mahkumdur!",
+            "secenekler": [
+              { "metin": "[Kendi Yansıman Tarafından Boğul]", "yozlasmaCarpani": 10, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "Lanetli anlaşma... Evet. Seni hiçlikten kurtarmak için 5 heceli bir isim verdik. Ama sen onu unuttun. Neden?",
+            "secenekler": [
+              { "metin": "Unutmadım. Onu geri almaya, eksik parçalarımı birleştirmeye geldim.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Sizin bana verdiğiniz isme ihtiyacım yok! Ben kendi ismimi yaratırım! (Kibir)", "yozlasmaCarpani": 6, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "kabul_yolu": {
+            "npcMetni": "Kabul etmek, sadece ilk adımdır. Eksik parçaların olmadan sen tam bir varlık değilsin. Kimliğini haykırabilecek misin?",
+            "secenekler": [
+              { "metin": "Ben kendi karanlığımın ve aydınlığımın efendisiyim.", "yozlasmaCarpani": -1, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Hepsini unuttum... Bana yardım et. (Zayıflık)", "yozlasmaCarpani": 4, "sonrakiDugum": "inkar_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "O halde son ritüel başlasın. Tüm evrenin önünde, gerçek adını haykır ve hiçliği parçala!",
+            "secenekler": [
+              { "metin": "[Son Ritüele Geç ve Kendinle Yüzleş]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Yalanların içinde boğuluyorsun! Sen hiçbir şeysin!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 8, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Artık feda edecek bir bağ yok. Tüm kimliğini kabul etmek için sahte anılarını sonsuza dek geride bırak."
+      }
+    }
+  ]
+}

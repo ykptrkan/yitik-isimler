@@ -1,0 +1,68 @@
+{
+  "bolgeId": "unutulmus_vadi",
+  "karsilasmalar": [
+    {
+      "id": "vadi_gozcusu",
+      "takmaAd": "Görünmez Gözcü",
+      "aciklama": "Zamanın durduğu bu sisli vadide, kayıp ruhları izleyen gizemli bir varlık.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Tir", "Fae", "Zar", "Bal", "Vor"],
+        "ipuclari": [
+          {
+            "id": "antik_heykel",
+            "isim": "Gözleri Oyulmuş Heykel",
+            "metin": "Heykelin dibindeki çatlak mermerde şu sözler yazılı: '{0} zamanlardan kalma, {1} ile görünmez bir {2}.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "(Ses her yönden aynı anda gelir) Burada sadece geçmişin rüzgarları eser... Sen hangi zamandan geliyorsun yolcu?",
+            "secenekler": [
+              { "metin": "Geçmişi silmeye, geleceği fethetmeye geldim! (Kibir)", "yozlasmaCarpani": 3, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Ben eski zamanlardan kalma, görünmez bir rüzgarım. (İpucunu Kullan)", "yozlasmaCarpani": -1, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Ben sadece 'an' içinde yolumu arıyorum. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Zaman fethedebileceğin bir kale değildir! Kibrin seni bu vadide sonsuza dek hapsedecek!",
+            "secenekler": [
+              { "metin": "[Zaman Döngüsüne Yakalan]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Rüzgar bir anlığına kesilir) Görünmez bir rüzgar... Evet, tıpkı benim gibi. Ama rüzgarın da bir yönü olmalı. Nereye esiyorsun?",
+            "secenekler": [
+              { "metin": "Senin adını taşıyan fırtınanın merkezine. Maskeni düşür.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Seni yeryüzünden silmeye esiyorum! (Kibir)", "yozlasmaCarpani": 4, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "'An' dediğin şey koca bir yalandır. Sadece hatıralar ve unutuluş vardır. Hangisini seçeceksin?",
+            "secenekler": [
+              { "metin": "Unutuluşu seçiyorum. Çünkü sen çoktan unutuldun. (Bilgelik)", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Hatıralarımla seni ezeceğim! (Öfke)", "yozlasmaCarpani": 3, "sonrakiDugum": "ofke_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Belki de unutulma vaktim çoktan gelmiştir... Zamanın kilidini aç bakalım.",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Hatıraların seni delirtecek!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Gözcü'nün üzerindeki görünmezlik sisini kaldırmak için, kendi zihnindeki berrak bir düşünceyi feda et."
+      }
+    }
+  ]
+}

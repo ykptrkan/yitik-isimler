@@ -1,0 +1,74 @@
+{
+  "bolgeler": [
+    {
+      "id": "kul_limani",
+      "isim": "Kül Limanı",
+      "x": 32, "y": 8,
+      "dosyaYolu": "bolgeler/kul_limani.json",
+      "baglantilar": ["sisli_orman", "kemik_colu", "firtina_koyu"]
+    },
+    {
+      "id": "firtina_koyu",
+      "isim": "Fırtına Koyu",
+      "x": 10, "y": 8,
+      "dosyaYolu": "bolgeler/firtina_koyu.json",
+      "baglantilar": ["kul_limani", "batik_mezarlik"]
+    },
+    {
+      "id": "kemik_colu",
+      "isim": "Kemik Çölü",
+      "x": 54, "y": 8,
+      "dosyaYolu": "bolgeler/kemik_colu.json",
+      "baglantilar": ["kul_limani", "yankilanan_magara"]
+    },
+    {
+      "id": "sisli_orman",
+      "isim": "Sisli Orman",
+      "x": 32, "y": 5,
+      "dosyaYolu": "bolgeler/sisli_orman.json",
+      "baglantilar": ["kul_limani", "batik_mezarlik", "yankilanan_magara", "kristal_zirve"]
+    },
+    {
+      "id": "batik_mezarlik",
+      "isim": "Batık Mezarlık",
+      "x": 10, "y": 5,
+      "dosyaYolu": "bolgeler/batik_mezarlik.json",
+      "baglantilar": ["firtina_koyu", "sisli_orman", "unutulmus_vadi"]
+    },
+    {
+      "id": "yankilanan_magara",
+      "isim": "Yankı Mağarası",
+      "x": 54, "y": 5,
+      "dosyaYolu": "bolgeler/yankilanan_magara.json",
+      "baglantilar": ["kemik_colu", "sisli_orman", "kizil_harabe"]
+    },
+    {
+      "id": "unutulmus_vadi",
+      "isim": "Unutulmuş Vadi",
+      "x": 10, "y": 2,
+      "dosyaYolu": "bolgeler/unutulmus_vadi.json",
+      "baglantilar": ["batik_mezarlik", "kristal_zirve"]
+    },
+    {
+      "id": "kizil_harabe",
+      "isim": "Kızıl Harabe",
+      "x": 54, "y": 2,
+      "dosyaYolu": "bolgeler/kizil_harabe.json",
+      "baglantilar": ["yankilanan_magara", "kristal_zirve"]
+    },
+    {
+      "id": "kristal_zirve",
+      "isim": "Kristal Zirve",
+      "x": 32, "y": 2,
+      "dosyaYolu": "bolgeler/kristal_zirve.json",
+      "baglantilar": ["unutulmus_vadi", "sisli_orman", "kizil_harabe", "unutulmus_aile_evi"]
+    },
+    {
+      "id": "unutulmus_aile_evi",
+      "isim": "Unutulmuş Aile Evi",
+      "x": 32, "y": 0,
+      "dosyaYolu": "bolgeler/unutulmus_aile_evi.json",
+      "baglantilar": ["kristal_zirve"]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "bolgeId": "firtina_koyu",
+  "karsilasmalar": [
+    {
+      "id": "bogulmus_kaptan",
+      "takmaAd": "Dalga Kıran",
+      "aciklama": "Denizin dibinde hapsolmuş, hiddetli ve fırtınaya yön veren eski bir ruh.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Zan", "Nir", "Su", "Kor", "Lun"],
+        "ipuclari": [
+          {
+            "id": "pusula",
+            "isim": "Kırık Pusula",
+            "metin": "Pusulanın arkasındaki aşınmış yazıda şu kelimeler seçiliyor: '{0} rüzgarlarda, {1} dalgalar içindeki {2}.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "Sular yükseliyor... Dalgaların sesini duyuyor musun? Sen de mi beni derinlere çekmeye geldin?",
+            "secenekler": [
+              { "metin": "Fırtınanın dinmesi gerek. Huzur bulmalısın. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "sukunet_yolu" },
+              { "metin": "Rüzgarlar koptuğunda dalgalara sen yenildin. (İpucunu Kullan)", "yozlasmaCarpani": -1, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Dalgaları ben yönetirim! Eğil önümde! (Kibir)", "yozlasmaCarpani": 3, "sonrakiDugum": "kibir_yolu" }
+            ]
+          },
+          "kibir_yolu": {
+            "npcMetni": "Sen denizden ne anlarsın fani! Okyanusun gazabını tat!",
+            "secenekler": [
+              { "metin": "[Şiddetli Dalgayla Çarpış]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Rüzgar bir anlığına kesilir) Dalgalar içindeki o fısıltı... Onlar seni kandırıyor. Rüzgarlar bana aitti!",
+            "secenekler": [
+              { "metin": "Rüzgarlar artık özgür, pusulan kırık. Yalanların sona erdi.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Pusulan kırık Kaptan, bana yalvar! (Aşağılama)", "yozlasmaCarpani": 3, "sonrakiDugum": "kibir_yolu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Huzur mu? Deniz bana ihanet etti! Gemi battığında sular bana sırtını döndü!",
+            "secenekler": [
+              { "metin": "O ihanetin acısı seni zehirliyor. Bırak seni arındırayım.", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Öyleyse denizin intikamını ben alacağım! (Öfke)", "yozlasmaCarpani": 4, "sonrakiDugum": "kibir_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Deniz hükmünü versin o halde... Gerçek yüzümü görmeye hazır mısın?",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Dalga Kıran'ın fırtınasına hükmetmek ve onu dindirmek için kendi dinginliğinden bir parça feda et."
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "bolgeId": "batik_mezarlik",
+  "karsilasmalar": [
+    {
+      "id": "sessiz_bekci",
+      "takmaAd": "Boğulmuş Bekçi",
+      "aciklama": "Sular altında kalmış eski bir mezarlığın taşları arasında dolaşan sessiz bir varlık.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Xal", "Vor", "Thal", "Ig", "Nim"],
+        "ipuclari": [
+          {
+            "id": "mezar_tasi",
+            "isim": "Yosunlu Mezar Taşı",
+            "metin": "Taş üzerindeki yazıt zar zor okunuyor: '{0} mezarlarda, {1} kadar soğuk bir {2} yatar.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "Ölülerin huzurunu bozuyorsun... Burası sessizliğin alanıdır.",
+            "secenekler": [
+              { "metin": "Ölülerin sessizliğini ben bozarım! Bana boyun eğ! (Kibir)", "yozlasmaCarpani": 2, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Soğuk mezarlarda yatanın sırrını biliyorum. (İpucunu Kullan)", "yozlasmaCarpani": -1, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Sessizliğine saygı duyuyorum, sadece gerçeği arıyorum. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Canlıların kibri sular altında boğulmaya mahkumdur!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Yüzsüz silüeti hafifçe titrer) Soğuk... Evet, dondurucu bir soğuk. Sen kimin adını anmaya cüret ediyorsun?",
+            "secenekler": [
+              { "metin": "Unutulmuş olanın adını! Karanlıktan çık!", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Seni yok etmeye gelenin! (Kibir)", "yozlasmaCarpani": 3, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Gerçek soğuktur yabancı... Zihnini dondurur. Bu yüke katlanabilecek misin?",
+            "secenekler": [
+              { "metin": "Benim iradem buzdan daha serttir! (Gurur)", "yozlasmaCarpani": 2, "sonrakiDugum": "hata_sonu" },
+              { "metin": "Gerçek ne kadar soğuksa, ruhum o kadar hazırdır.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "O halde bana kim olduğumu söyle... Eğer hatırlayabilirsen.",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Karanlık sular seni yutacak ve kimse çığlığını duymayacak!",
+            "secenekler": [
+              { "metin": "[Saldırıya Uğra]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Bekçinin zincirlerini kırmak için, zihnindeki sıcak anılardan birini karanlık sulara bırak."
+      }
+    }
+  ]
+}

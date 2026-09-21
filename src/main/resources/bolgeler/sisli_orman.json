@@ -1,0 +1,68 @@
+{
+  "bolgeId": "sisli_orman",
+  "karsilasmalar": [
+    {
+      "id": "orman_ruhu",
+      "takmaAd": "Gölge Dokuyan",
+      "aciklama": "Ağaçların arasında kaybolanların korkularından beslenen kadim bir illüzyon.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Kha", "Kael", "En", "Ul", "Mur"],
+        "ipuclari": [
+          {
+            "id": "agac_oymasi",
+            "isim": "Kanlı Ağaç Oyması",
+            "metin": "Kabuğa kazınmış bir uyarı: 'Sadece {0} bir zihin, {1} altındaki bu {2} ile yüzleşebilir.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "(Etrafındaki sis senin silüetini alır) Ormanın sessizliği seni yutacak. Kendi karanlığından kaçmaya mı geldin?",
+            "secenekler": [
+              { "metin": "Ben kendi gölgemden korkmam! Çık karşıma! (Öfke)", "yozlasmaCarpani": 2, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Benim zihnim bu topraklara kök salmış gölgelerden daha sessizdir. (İpucunu Kullan)", "yozlasmaCarpani": -1, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Yolumu arıyorum, illüzyonlardan korkmuyorum. (Sükunet)", "yozlasmaCarpani": 0, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Korkmuyorsun demek... Öfken, korkunun saklandığı en ucuz maskedir!",
+            "secenekler": [
+              { "metin": "[Kendi Gölgene Yenil]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Sis geri çekilir, ağaçların fısıltısı kesilir) Sessiz... Tıpkı o uyarıdaki gibi. Zihninde beni yenecek bir sessizlik mi var?",
+            "secenekler": [
+              { "metin": "Senin fısıltılarını susturacak kadar derin bir sessizlik... Adını ver bana.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Seni kendi ormanına gömecek bir gücüm var! (Kibir)", "yozlasmaCarpani": 3, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Sükunet, kırılması en kolay daldır. Senin zihninde binlerce çığlık duyuyorum!",
+            "secenekler": [
+              { "metin": "O çığlıklar sana ait değil, benim geçmişim. Onları kabul ediyorum.", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Sus artık, lanetli orman ruhu! (Öfke)", "yozlasmaCarpani": 4, "sonrakiDugum": "ofke_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Maskemi düşürüyorsun... O halde karanlık sırrımı zihnine fısıldayayım.",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Ağaçların arasında sonsuza dek dolaşacaksın!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Gölge Dokuyan'ın illüzyonlarını parçalamak için içindeki aydınlıktan bir parça bırak."
+      }
+    }
+  ]
+}

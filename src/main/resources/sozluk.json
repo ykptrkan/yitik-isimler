@@ -1,0 +1,38 @@
+{
+  "gramerKurali": "İsimler şu sırayla oluşur: [Durum] + [Element] + [Unvan]",
+  "heceler": {
+    "Gor": { "anlam": "Karanlık", "tur": "Durum" },
+    "Va": { "anlam": "Işık", "tur": "Durum" },
+    "Zan": { "anlam": "İhanet", "tur": "Durum" },
+    "Kor": { "anlam": "Kızıl", "tur": "Durum" },
+    "Tir": { "anlam": "Kadim", "tur": "Durum" },
+    "Xal": { "anlam": "Unutulmuş", "tur": "Durum" },
+    "Bal": { "anlam": "Kanlı", "tur": "Durum" },
+    "Ul": { "anlam": "Yüce", "tur": "Durum" },
+    "Kha": { "anlam": "Sessiz", "tur": "Durum" },
+    "Nim": { "anlam": "Yankılanan", "tur": "Durum" },
+
+    "Ig": { "anlam": "Ateş", "tur": "Element" },
+    "Nir": { "anlam": "Su", "tur": "Element" },
+    "Fae": { "anlam": "Rüzgar", "tur": "Element" },
+    "Kael": { "anlam": "Toprak", "tur": "Element" },
+    "Ohm": { "anlam": "Yıldırım", "tur": "Element" },
+    "Vor": { "anlam": "Buz", "tur": "Element" },
+    "Mur": { "anlam": "Deniz", "tur": "Element" },
+    "Sol": { "anlam": "Güneş", "tur": "Element" },
+    "Lun": { "anlam": "Ay", "tur": "Element" },
+    "Grak": { "anlam": "Kemik", "tur": "Element" },
+
+    "Ka": { "anlam": "Kök", "tur": "Unvan" },
+    "Lir": { "anlam": "Nefes", "tur": "Unvan" },
+    "Thal": { "anlam": "Bekçi", "tur": "Unvan" },
+    "Kel": { "anlam": "Kaptan", "tur": "Unvan" },
+    "En": { "anlam": "Gölge", "tur": "Unvan" },
+    "Su": { "anlam": "Ruh", "tur": "Unvan" },
+    "Zar": { "anlam": "Örtü", "tur": "Unvan" },
+    "Nok": { "anlam": "Sözleşme", "tur": "Unvan" },
+    "Vex": { "anlam": "Harabe", "tur": "Unvan" },
+    "Rah": { "anlam": "Kral", "tur": "Unvan" },
+    "Dir": { "anlam": "Kapı", "tur": "Unvan" }
+  }
+}

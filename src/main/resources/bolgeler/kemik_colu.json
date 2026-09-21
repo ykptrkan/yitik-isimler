@@ -1,0 +1,68 @@
+{
+  "bolgeId": "kemik_colu",
+  "karsilasmalar": [
+    {
+      "id": "col_hakimi",
+      "takmaAd": "Kumların Hakimi",
+      "aciklama": "Yıllardır fırtınalar içinde kaybolmuş ruhları avlayan bir varlık.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Bal", "Grak", "Rah", "Kha", "Dir"],
+        "ipuclari": [
+          {
+            "id": "dikilitas",
+            "isim": "Aşınmış Dikilitaş",
+            "metin": "Taş üzerinde eski dilde bir kehanet var: '{0} bir savaşın sonunda, {1} yığınları üzerine oturan {2}...'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "Kumlar her şeyi yutar... Tıpkı benim senin ismini yutacağım gibi. Ne cüretle topraklarıma girersin?",
+            "secenekler": [
+              { "metin": "Senin kumların sadece ölüleri saklar! (Öfke)", "yozlasmaCarpani": 1, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Oturduğun tahtın kemik yığınlarından ibaret olduğunu biliyorum. (İpucunu Kullan)", "yozlasmaCarpani": 0, "sonrakiDugum": "ipucu_yolu" },
+              { "metin": "Ben kumdan geldim, kumlara dönerim. (Sükunet)", "yozlasmaCarpani": -1, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Ölüler bana hizmet eder! Şimdi sen de o yığına katılacaksın!",
+            "secenekler": [
+              { "metin": "[Kum Fırtınasının İçinde Kal]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "ipucu_yolu": {
+            "npcMetni": "(Rüzgar hiddetlenir) O kemikler... O kemikler bana ait olan sadakatti! Benden her şeyimi çaldılar!",
+            "secenekler": [
+              { "metin": "Artık sadakat yok, sadece hiçlik var. Adını bana ver.", "yozlasmaCarpani": -1, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Ben de senin kemiklerini o yığına ekleyeceğim! (Öfke)", "yozlasmaCarpani": 3, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Zayıflar hep böyle der. Rüzgar seni parça parça koparırken sükunetini koruyabilecek misin?",
+            "secenekler": [
+              { "metin": "Eğer fırtına dinmezse, çölün kendisi seni yutacak. Bırak seni özgür kılayım. (Bilgelik)", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Zayıf olan sensin, sadece kumdan ibaretsin! (Kibir)", "yozlasmaCarpani": 4, "sonrakiDugum": "ofke_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Özgürlük mü... Belki de rüzgarın dinme vakti gelmiştir. Konuş o halde!",
+            "secenekler": [
+              { "metin": "[Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Kemiklerin çölümü besleyecek!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Kumların efendisine boyun eğdirmek ve ismini almak için zihninden bir parçayı çölün kuraklığına göm."
+      }
+    }
+  ]
+}

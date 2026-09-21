@@ -1,0 +1,75 @@
+{
+  "bolgeId": "kul_limani",
+  "karsilasmalar": [
+    {
+      "id": "liman_tuccari",
+      "takmaAd": "Gezgin Tüccar Silas",
+      "aciklama": "Limanın nemli sisleri arasında, anıları fahiş fiyata satan yozlaşmış bir ruh.",
+      "arastirma": {
+        "ogrenilecekHeceler": ["Gor", "Mur", "Kel", "Zar", "Fae"],
+        "ipuclari": [
+          {
+            "id": "gemi_kaydi",
+            "isim": "Yırtık Gemi Günlüğü",
+            "metin": "Günlüğün silik satırlarında şu yazıyor: 'O, {0} çöktüğünde {1} sularına ihanet eden ilk {2} idi.'"
+          }
+        ]
+      },
+      "diyalogAgaci": {
+        "baslangicDugumu": "karsilasma_baslangic",
+        "dugumler": {
+          "karsilasma_baslangic": {
+            "npcMetni": "Sırların ne kadar eder yabancı? Bu sisli limanda her şeyin bir bedeli vardır.",
+            "secenekler": [
+              { "metin": "Senin gibi bir hırsıza sır vermem! (Öfke)", "yozlasmaCarpani": 1, "sonrakiDugum": "ofke_yolu" },
+              { "metin": "Kaptanlara ne yaptığını biliyorum Silas. Sırların bende. (İpucunu Kullan)", "yozlasmaCarpani": 0, "sonrakiDugum": "sorgu_yolu" },
+              { "metin": "Benim sırlarım satılık değil. (Sükunet)", "yozlasmaCarpani": -1, "sonrakiDugum": "sukunet_yolu" }
+            ]
+          },
+          "ofke_yolu": {
+            "npcMetni": "Hırsız mı? Ben sadece batan gemilerden arta kalanları toplayan bir elçiyim! Haddini bil!",
+            "secenekler": [
+              { "metin": "O gemileri sen batırdın! Karanlık çöktüğünde onlara ihanet ettin! (Yüzleşme)", "yozlasmaCarpani": 0, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Haddimi sen mi bildireceksin? (Kibir)", "yozlasmaCarpani": 3, "sonrakiDugum": "hata_sonu" }
+            ]
+          },
+          "sorgu_yolu": {
+            "npcMetni": "(Gözleri büyür ve geri adım atar) Deniz onları çoktan yuttu... Sen kimsin?",
+            "secenekler": [
+              { "metin": "Ben denizin intikamıyım. Adını geri almaya geldim.", "yozlasmaCarpani": -2, "sonrakiDugum": "rituel_basla" },
+              { "metin": "Karanlık sırlarını bana ver, yaşamana izin vereyim. (Pazarlık)", "yozlasmaCarpani": 2, "sonrakiDugum": "pazarlik_hata" }
+            ]
+          },
+          "sukunet_yolu": {
+            "npcMetni": "Satılık değilse, zorla alırım! Sessizliğin beni korkutmuyor!",
+            "secenekler": [
+              { "metin": "O zaman zihnimi zorla da gör! (Meydan Oku)", "yozlasmaCarpani": 4, "sonrakiDugum": "hata_sonu" },
+              { "metin": "Seni korkutacak olan sessizliğim değil, bildiklerimdir.", "yozlasmaCarpani": 0, "sonrakiDugum": "ofke_yolu" }
+            ]
+          },
+          "rituel_basla": {
+            "npcMetni": "Hayır... Hatıralarımı ve ismimi benden alamazsın!",
+            "secenekler": [
+              { "metin": "[Zihni Kırıldı - Ritüele Geç ve Adını Söyle]", "yozlasmaCarpani": 0, "tetiklenecekAsama": "heceleme" }
+            ]
+          },
+          "hata_sonu": {
+            "npcMetni": "Sırların benimdir! Sulara gömül!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 5, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          },
+          "pazarlik_hata": {
+            "npcMetni": "Kibirli aptal! Benimle pazarlık edilmez!",
+            "secenekler": [
+              { "metin": "[Zihinsel Darbe Al]", "yozlasmaCarpani": 6, "tetiklenecekAsama": "savas_hasari" }
+            ]
+          }
+        }
+      },
+      "fedakarlik": {
+        "hikayeMetni": "Tüccarın kadim ismini zihnine kazımak için, sahip olduğun öz hecelerden birini feda etmelisin."
+      }
+    }
+  ]
+}
